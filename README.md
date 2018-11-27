@@ -1,1 +1,1 @@
-### Minimal Node.js application for Docker image demo tutorial
+Minimal Node.js application for Docker image demo tutorial
