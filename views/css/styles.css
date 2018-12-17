@@ -1,9 +1,10 @@
 .navbar {
 	margin-bottom: 0;
+        background: #000000;
 }
 
 body {
-	background: #020A1B;
+	background: #000000;
 	color: #ffffff;
 	font-family: 'Merriweather', sans-serif;
 }
