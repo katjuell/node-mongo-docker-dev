@@ -5,10 +5,6 @@
   "author": "katjuell <kathleenjuell@gmail.com>",
   "license": "MIT",
   "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/katjuell/nodejs-image-demo.git"
