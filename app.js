@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 const express = require('express');
-=======
-const express = require('express');
->>>>>>> upstream/master
 const app = express();
 const router = express.Router();
 
 const path = __dirname + '/views/';
 
-<<<<<<< HEAD
 const port = 8080;
-=======
-const port = 8080;
->>>>>>> upstream/master
 
 router.use(function (req,res,next) {
   console.log('/' + req.method);
