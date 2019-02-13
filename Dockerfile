@@ -6,13 +6,11 @@ WORKDIR /home/node/app
 
 COPY package*.json ./
 
+USER node
+
 RUN npm install
 
-COPY . .
-
 COPY --chown=node:node . .
-
-USER node
 
 EXPOSE 8080
 
