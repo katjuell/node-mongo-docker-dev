@@ -12,13 +12,13 @@ services:
     environment:
       - MONGO_USERNAME=$MONGO_USERNAME
       - MONGO_PASSWORD=$MONGO_PASSWORD
-      - MONGO_HOSTNAME=$MONGO_HOSTNAME
+      - MONGO_HOSTNAME=db
       - MONGO_PORT=$MONGO_PORT
       - MONGO_DB=$MONGO_DB 
     ports:
       - "80:8080"
     volumes:
-      - ./app:/home/node/app
+      - .:/home/node/app
       - node_modules:/home/node/app/node_modules
     depends_on:
       - db
@@ -27,15 +27,14 @@ services:
     command: ./wait-for.sh db:27017 -- /home/node/app/node_modules/.bin/nodemon app.js
 
   db:
-    image: mongo
+    image: mongo:4.1.8-xenial
     container_name: db
     restart: unless-stopped
+    env_file: .env
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=user
-      - MONGO_INITDB_ROOT_PASSWORD=password
-      - MONGO_INITDB_DATABASE=admin
+      - MONGO_INITDB_ROOT_USERNAME=$MONGO_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD=$MONGO_PASSWORD
     volumes:  
-      - ./db-init.js:/docker-entrypoint-initdb.d/db-init.js
       - dbdata:/data/db   
     networks:
       - app-network  
