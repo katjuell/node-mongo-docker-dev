@@ -6,4 +6,3 @@ Dockerfile
 README.md
 .gitignore
 .env
-db-init.js
