@@ -6,4 +6,4 @@ Dockerfile
 README.md
 .gitignore
 .env
-secret.yaml
+
