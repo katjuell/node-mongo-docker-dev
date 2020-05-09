@@ -44,7 +44,14 @@ audio {
     max-width: 80%;
 }
 
-div.caption: {
+div.caption {
     float: left;
     clear: both;
+}
+
+.new-shark {
+  background-color: white;
+  border-radius: 2px;
+  color: black;
+  padding: 7px
 }
