@@ -52,6 +52,6 @@ div.caption {
 .new-shark {
   background-color: white;
   border-radius: 2px;
-  color: black;
+  color: black !important;
   padding: 7px
 }
