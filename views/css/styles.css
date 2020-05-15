@@ -44,9 +44,9 @@ audio {
     max-width: 80%;
 }
 
-div.caption {
-    float: left;
-    clear: both;
+.submit {
+  margin-top: 5px;
+  padding: 7px;
 }
 
 .new-shark {
